@@ -1,6 +1,6 @@
-FROM openjdk:17-alpine
+FROM ubuntu:latest
 WORKDIR /app
-#RUN apt update && apt install -y openjdk-11-jre
+RUN apt update && apt install -y openjdk-11-jre
 
 LABEL authors="panxian"
 ADD target/springboot_jenkins_test-0.0.1-SNAPSHOT.jar app.jar
